@@ -8,7 +8,7 @@
 <body> 
 	
 	<?php 
-	echo '<p>Hello world,1!</p>';
+	echo '<p>ASD,1!</p>';
 
 
 	?>
