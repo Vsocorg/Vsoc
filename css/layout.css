@@ -21,15 +21,15 @@ html,body{
 	z-index: 0;
 	filter: blur(3px);
 }
-.pan.left{	
+.pan.left, .pan.back{	
 	background-color: rgba(255,255,255,0.2);
 
 	position: fixed;
 	
 	left: 0%;
-	right:50%;
+	
 	top:0;
-	bottom:100%;
+	
 
 	width: 50%;
 	height: 100%;
@@ -45,14 +45,26 @@ html,body{
 	position: fixed;
 	
 	left: 50%;
-	right:100%;
+	
 	top:0;
-	bottom:100%;
+	
 
 	width: 50%;
 	height: 100%;
 
 	transition: 1s;
+}
+.pan.center{
+	background-color: rgba(255,255,255,0.9);
+	color:black;
+
+	position: fixed;
+	
+	left: 25%;	
+	top:0;	
+
+	width: 50%;
+	height: 100%;
 }
 .pan.right:hover{
 	background-color: rgba(255,255,255,0.8);
