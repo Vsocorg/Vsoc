@@ -1,0 +1,501 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"word",
+				"word-wrap"
+			],
+			[
+				"f",
+				"fixed"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"bac",
+				"background-repeat"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"target",
+				"target_id"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"get",
+				"getProd"
+			],
+			[
+				"Content",
+				"content-type"
+			],
+			[
+				"log",
+				"loged"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"tans",
+				"transform"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"tab",
+				"table-row"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tabl",
+				"table-cell"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php \n$data = [\n\"admin\"=>\"admin\",\n\"user1\"=>\"user1\",\n\"user2\"=>\"user2\"\n];\n$str = \"Вы не авторизированы!\";\nif(isset($_POST[\"log\"]) and isset($_POST[\"pass\"])){\n\tif(check($_POST[\"log\"],$_POST[\"pass\"])==true)\n\t\t$str =  \"Вы авторизированы!\";\n}\nif(isset($_GET[\"log\"]) and isset($_GET[\"pass\"])){\n\tif(check($_GET[\"log\"],$_GET[\"pass\"])==true)\n\t\t$str =  \"Вы авторизированы!\";\n}\necho $str;\nfunction check($log,$pass){\n\tglobal $data;\n\t$res = false;\n\tif(isset($data[$log]))\n\t\tif($data[$log] == $pass)\n\t\t\t$res = true;\n\treturn $res;\n}\n?>",
+			"file": "/C/OpenServer/domains/localhost/back/sokol/vsoc1/db_pass.php",
+			"file_size": 595,
+			"file_write_time": 131423474720968368,
+			"settings":
+			{
+				"buffer_size": 521,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/imagick.php",
+			"settings":
+			{
+				"buffer_size": 1690,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/cutface.php",
+			"settings":
+			{
+				"buffer_size": 449,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 307,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install p",
+		"selected_items":
+		[
+			[
+				"install p",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 223.0,
+		"history":
+		[
+			"install package"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc1/index.php",
+		"/C/OpenServer/domains/localhost/index.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/db_pass.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/index.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/empty_page.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/side_prod.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/.htaccess",
+		"/C/OpenServer/domains/localhost/sokol/tasks5/history/blocks_colors.html",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/parser.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/css/layout.css",
+		"/C/OpenServer/domains/localhost/sokol/tasks5/block.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks5/history/blocks_colors.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks5/history/block.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/side_prod.html",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/css/pagination.css",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/main.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/content.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/side.html",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/content.html",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/includes.sublime-project",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/header.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/products.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/css/products.css",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/index.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks4/products/header.html",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/get_prod.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/products.sublime-project",
+		"/C/OpenServer/domains/localhost/sokol/tasks3/includes/css/layout.css",
+		"/C/OpenServer/domains/localhost/sokol/tasks3/includes/header.html",
+		"/C/Users/Sokolov/Desktop/Пхп.txt",
+		"/C/OpenServer/domains/localhost/sokol/tasks3/pigibank.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks3/mult.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks3/includes/includes.sublime-project",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/return_prod.php",
+		"/C/OpenServer/domains/localhost/sokol/css/grid.css",
+		"/C/OpenServer/domains/localhost/sokol/toast.php",
+		"/C/OpenServer/userdata/config/PHP-5.6_php.ini",
+		"/C/OpenServer/modules/php/PHP-5.6/php.ini",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/products.sublime-workspace",
+		"/C/Users/Sokolov/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/OpenServer/domains/localhost/sokol/tasks1/professions.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/return_json.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/json/get_json.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/ajax/ajax_sum.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/ajax/ajax_info.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/ajax/ajax.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/summer.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/login.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/ajax.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/ajax_info.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks2/res.php",
+		"/F/PHP/sokol/tasks2/login.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks1/blocks.php",
+		"/C/OpenServer/domains/localhost/sokol/index.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks1/login.php",
+		"/C/OpenServer/domains/localhost/sokol/gallery/index.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks1/getform.php",
+		"/C/OpenServer/domains/localhost/sokol/tasks1/getformsumm.php",
+		"/C/OpenServer/domains/localhost/sokol/gallery/index.html",
+		"/C/Users/Sokolov/Desktop/Новый текстовый документ.txt",
+		"/C/OpenServer/domains/localhost/sokol/index.php.txt"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"showFormAddProd",
+			"xremote",
+			"grey"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/OpenServer/domains/localhost/back/sokol/vsoc1/db_pass.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								521,
+								521
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 175.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/imagick.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/cutface.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								354,
+								354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "vsoc.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 215.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

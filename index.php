@@ -4,13 +4,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>Title Goes Here</title> 
  </head>
+ <link rel="stylesheet" type="text/css" href="css/layout.css">
  
 <body> 
 	
-	<?php 
-	echo '<p>ASD,1!</p>';
-
-
-	?>
+	<a href="login.php">Login</a>
 </body>
 </html> 
