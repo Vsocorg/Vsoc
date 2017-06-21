@@ -70,6 +70,47 @@ html,body{
 	background-color: rgba(255,255,255,0.8);
 	transition: .5s;
 }
+/*//////////////////////////////////////////*/
+nav.nav{
+	font-size: 22pt;
+	padding-left: 25px;
+}
+nav.nav *{	
+	margin:0; 
+
+}
+nav.nav .fa{
+	color: rgba(50,50,50,1);		
+	transition: .5s;
+}
+nav.nav .fa:hover{
+	color: rgba(50,50,50,0.8);		
+	transition: .5s;
+}
+nav.nav .sep{
+	display: inline;
+	height: 100%;
+	border-left: 1px solid black;
+	margin: 0 15px;
+}
+.link{
+	color:black;
+	text-decoration: none;
+}
+.link:hover{
+	text-decoration: none;
+}
+
+.link-main{
+
+}
+
+
+.main-photo img{
+	width: 100%;
+}
+
+/*//////////////////////////////////////////*/
 .login{
 	width: 300px;
 	position: absolute;		
@@ -81,7 +122,11 @@ html,body{
 .login input{
 	width: 100%;
 }
+/*//////////////////////////////////////////*/
 
+.m0{
+	margin:0;
+}
 .p0{
 	padding: 0 !important;
 }
