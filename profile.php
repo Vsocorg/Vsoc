@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html lang="en">
  <head>
@@ -46,17 +48,14 @@
 				<div class="profile-btns">
 					<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
 				</div>
-				<h3 class="p0 m0" id="profile-head"><b id="profile-name">Camillo Carter</b> <small>online</small></h3><br>	
+				<h3 class="p0 m0" id="profile-head"><b id="profile-name">
+				<?= $_SESSION["User"]["first_name"]." ".$_SESSION["User"]["last_name"] ?></b> <small>online</small></h3><br>	
 
 					<div class="profile-info">
 				<p> <b>Age:</b> 61 y.o.</p>
 				<p> <b>Profession: </b>photographer</p>
 				<p>  <b>Location:</b> Odessa</p>
-				<p> <b>About:</b> I had started to work as a weekend sports photographer in 1983. In 1984, he moved on to work for the Johannesburg Star, went on exposing the brutality of apartheid.
-	Carter was the first to photograph a public execution "necklacing" by black Africans in South Africa in the mid-1980s. Carter later spoke of the images: "I was appalled at what they were doing. But then people started talking about those pictures... then I felt that maybe my actions hadn't been at all bad. Being a witness to something this horrible wasn't necessarily such a bad thing to do.
-I had started to work as a weekend sports photographer in 1983. In 1984, he moved on to work for the Johannesburg Star, went on exposing the brutality of apartheid.
-	Carter was the first to photograph a public execution "necklacing" by black Africans in South Africa in the mid-1980s. Carter later spoke of the images: "I was appalled at what they were doing. But then people started talking about those pictures... then I felt that maybe my actions hadn't been at all bad. Being a witness to something this horrible wasn't necessarily such a bad thing to do
-	</p>
+				<p> <b>About:</b> <?= $_SESSION["User"]["info"] ?></p>
 				</div>
 			</div>		
 		</div>

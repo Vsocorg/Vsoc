@@ -14,7 +14,7 @@
 	<div class="pan left"></div>
 	<div class="pan right">
 		<div class="login">
-			<form>
+			<form method="GET" action="auth.php">
 			<h1>VSOC</h1>
 			<div class="col-xs-12 p0">
 				<div class="col-xs-12 p0">
