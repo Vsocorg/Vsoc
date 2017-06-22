@@ -13,11 +13,11 @@ session_start();
 
 			$_SESSION["User"] = $user;
 
-			var_dump($_SESSION["User"]);
-			echo "auth";
+			//var_dump($_SESSION["User"]);
+			header('Location: profile.php');
 		}
-		else echo "no auth ";
-		var_dump($user);
+		else header('Location: login.php');
+		
 	}
 
 
