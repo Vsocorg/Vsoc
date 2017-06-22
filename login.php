@@ -15,19 +15,20 @@
 	<div class="pan right">
 		<div class="login">
 			<form method="GET" action="auth.php">
-			<h1>VSOC</h1>
+			<a href="index.php" class="link"><h1>VSOC</h1></a>
+			
 			<div class="col-xs-12 p0">
 				<div class="col-xs-12 p0">
 					<label>Login</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom">
-					<input type="login" name="login">
+					<input type="login" name="login" required>
 				</div>
 				<div class="col-xs-12 p0 ">
 					<label>Pass</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom25">
-					<input type="password" name="pass">
+					<input type="password" name="pass" required>
 				</div>
 				<div class="col-xs-12 p0">
 					<input type="submit" value="Sign In">

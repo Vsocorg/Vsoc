@@ -4,6 +4,7 @@
 html,body{
 	min-width: 100%;
 	font-family: 'Raleway', sans-serif;	
+min-width: 450px;
 }
 .back{
 	background-image: url(../images/bg2.jpg);
@@ -45,7 +46,7 @@ html,body{
 	color:black;
 	position: fixed;
 	
-	left: 50%;
+	right: 0%;
 	
 	top:0;
 	
@@ -54,6 +55,8 @@ html,body{
 	height: 100%;
 
 	transition: 1s;
+
+	min-width: 450px;
 }
 .pan.center{
 	background-color: rgba(255,255,255,0.9);
@@ -127,12 +130,53 @@ nav.nav .sep{
 	margin: 0 15px;
 }
 
+.link-container .nav-menu{
+	position: absolute;
+	top: 28px;
+    left: 0;
+    
+    z-index: 1;
+    font-size: 14pt;
+    font-weight: 500;
+	//transform: translateX(100%);
+	
+	border: 1px solid white;
+	width: 140px;
+	text-align: center; 
 
+	
+	display: none;
+
+}
+.link-container{
+	display: inline-block;
+	position: relative;
+}
+.nav .nav-menu a{
+	display: block;
+	text-decoration: none !important;
+	color:white;
+	padding: 0 15pt;
+	background-color: rgba(0,0,0,0.7);
+
+	transition: 1s: 
+}
+.nav .nav-menu a:hover{
+	background-color: rgba(128,128,128,0.7);	 
+	transition: 1s: 
+}
+
+.link-container:hover .nav-menu{
+	display: block !important;
+
+}
 .link{
+	display: inline;
 	color:black;
 	text-decoration: none;
 }
 nav .link , .link:hover{
+	position: relative;
 	text-decoration: none !important;
 }
 nav .link sub{
@@ -152,7 +196,7 @@ nav .link sub{
 
 
 .main-photo img{
-	height: 100%;
+	width:  100%;
 	float:right;
 }
 

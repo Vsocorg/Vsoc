@@ -1,4 +1,15 @@
-<?php session_start() ?>
+<?php session_start();
+if(!isset($_SESSION["User"])){
+	header('Location: login.php');				
+			}
+
+
+	include_once("db_queries.php");
+
+
+			
+
+?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html lang="en">
@@ -26,7 +37,17 @@
 			<a href="index.php" class="link link-main">VSOC</a>
 
 			<div class="sep"></div>		
-			<a href="profile.php"><i class="fa fa-user" aria-hidden="true"></i></a>		
+
+			<div class="link-container">
+			<a href="profile.php" class="link link-menu">
+				<i class="fa fa-user" aria-hidden="true"></i>				
+			</a>
+			<div class="nav-menu">
+					<a href="profile.php">My Profile</a>
+					<a href="auth.php?action=logout">Log Out</a>
+				</div>		
+			</div>
+				
 			<div class="sep"></div>		
 			
 			
@@ -42,7 +63,7 @@
 		<div class="col-xs-12 page">	
 		<div class="row">
 			<div class="col-xs-5 main-photo">	
-				<img src="https://s-media-cache-ak0.pinimg.com/236x/37/aa/5f/37aa5fad95cc8d2a8aa136843e173ee9.jpg" alt="">
+				<img src="<?=getAvatar($_SESSION["User"]["id"])["path"]?>" alt="">
 			</div>
 			<div class="col-xs-7 ">	
 				<div class="profile-btns">
@@ -55,7 +76,7 @@
 				<p> <b>Age:</b> 61 y.o.</p>
 				<p> <b>Profession: </b>photographer</p>
 				<p>  <b>Location:</b> Odessa</p>
-				<p> <b>About:</b> <?= $_SESSION["User"]["info"] ?></p>
+				<p> <b>About:</b> <?= $_SESSION["User"]["info"] ?></p>		
 				</div>
 			</div>		
 		</div>
