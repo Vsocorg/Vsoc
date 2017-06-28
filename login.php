@@ -2,11 +2,10 @@
 <html lang="en">
  <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<title>Title Goes Here</title> 
+	<title>VSOC | Login</title> 
+	
+	<?php include_once("common_resources.php"); ?>
 
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
  </head> 
 <body> 	

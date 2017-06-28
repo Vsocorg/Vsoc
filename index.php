@@ -7,7 +7,6 @@
  <link rel="stylesheet" type="text/css" href="css/layout.css">
  
 <body> 
-	
 	<a href="login.php">Login</a>
 	<a href="profile.php">Profile</a>
 </body>

@@ -15,11 +15,10 @@ if(!isset($_SESSION["User"])){
 <html lang="en">
  <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<title>Title Goes Here</title> 
+	<title>VSOC | Profile</title> 
 
+	<?php include_once("common_resources.php"); ?>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
@@ -33,33 +32,8 @@ if(!isset($_SESSION["User"])){
 	col-sm-10 
 	col-md-8
 	">
-		<nav class="col-xs-12 nav m_bottom25">
-			<a href="index.php" class="link link-main">VSOC</a>
-
-			<div class="sep"></div>		
-
-			<div class="link-container">
-			<a href="profile.php" class="link link-menu">
-				<i class="fa fa-user" aria-hidden="true"></i>				
-			</a>
-			<div class="nav-menu">
-					<a href="profile.php">My Profile</a>
-					<a href="auth.php?action=logout">Log Out</a>
-				</div>		
-			</div>
-				
-			<div class="sep"></div>		
-			
-			
-			<a href="#" class="link">
-				<i class="fa fa-comment" aria-hidden="true"></i>
-				<sub>3</sub>
-			</a>
-			<a href="#" class="link">
-				<i class="fa fa-bell" aria-hidden="true"></i>
-				<sub>52</sub>
-			</a>			
-		</nav>
+		<?php include_once("nav.php") ?>
+		
 		<div class="col-xs-12 page">	
 		<div class="row">
 			<div class="col-xs-5 main-photo">	
@@ -75,7 +49,7 @@ if(!isset($_SESSION["User"])){
 					<div class="profile-info">
 				<p> <b>Age:</b> 61 y.o.</p>
 				<p> <b>Profession: </b>photographer</p>
-				<p>  <b>Location:</b> Odessa</p>
+				<p> <b>Location:</b> Odessa</p>
 				<p> <b>About:</b> <?= $_SESSION["User"]["info"] ?></p>		
 				</div>
 			</div>		
