@@ -76,8 +76,11 @@ min-width: 450px;
 	transition: .5s;
 }
 
+.panel {
+	margin-bottom: 0px;
+}
 .page{
-	height: 100%;
+	//height: 100%;
 }
 .page .row:first-child{
 	height: 50%;
@@ -244,3 +247,4 @@ nav .link sub{
 .m_bottom100{
 	margin-bottom: 100px;
 }
+

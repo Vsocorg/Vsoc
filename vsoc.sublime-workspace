@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"ove",
+				"overflow"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
 				"re",
 				"return"
 			],
@@ -36,10 +64,6 @@
 				"inline"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"res",
 				"result"
 			],
@@ -64,28 +88,12 @@
 				"transition"
 			],
 			[
-				"mar",
-				"margin-left"
-			],
-			[
 				"fil",
 				"filter"
 			],
 			[
-				"bac",
-				"background-repeat"
-			],
-			[
 				"back",
 				"background-color"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"pad",
-				"padding"
 			],
 			[
 				"val",
@@ -164,75 +172,10 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php \n$data = [\n\"admin\"=>\"admin\",\n\"user1\"=>\"user1\",\n\"user2\"=>\"user2\"\n];\n$str = \"Вы не авторизированы!\";\nif(isset($_POST[\"log\"]) and isset($_POST[\"pass\"])){\n\tif(check($_POST[\"log\"],$_POST[\"pass\"])==true)\n\t\t$str =  \"Вы авторизированы!\";\n}\nif(isset($_GET[\"log\"]) and isset($_GET[\"pass\"])){\n\tif(check($_GET[\"log\"],$_GET[\"pass\"])==true)\n\t\t$str =  \"Вы авторизированы!\";\n}\necho $str;\nfunction check($log,$pass){\n\tglobal $data;\n\t$res = false;\n\tif(isset($data[$log]))\n\t\tif($data[$log] == $pass)\n\t\t\t$res = true;\n\treturn $res;\n}\n?>",
-			"file": "/C/OpenServer/domains/localhost/back/sokol/vsoc1/db_pass.php",
-			"file_size": 595,
-			"file_write_time": 131423474720968368,
-			"settings":
-			{
-				"buffer_size": 521,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/imagick.php",
-			"settings":
-			{
-				"buffer_size": 1690,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/cutface.php",
-			"settings":
-			{
-				"buffer_size": 449,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 399,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "profile.php",
-			"settings":
-			{
-				"buffer_size": 2400,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/layout.css",
-			"settings":
-			{
-				"buffer_size": 3337,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/scroll.css",
-			"settings":
-			{
-				"buffer_size": 262,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks8/links.php",
-			"settings":
-			{
-				"buffer_size": 759,
+				"buffer_size": 397,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -241,42 +184,52 @@
 			"file": "login.php",
 			"settings":
 			{
-				"buffer_size": 1322,
+				"buffer_size": 1078,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/form.php",
+			"file": "dialogs.php",
 			"settings":
 			{
-				"buffer_size": 824,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/check.php",
-			"settings":
-			{
-				"buffer_size": 679,
+				"buffer_size": 4896,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "auth.php",
-			"settings":
-			{
-				"buffer_size": 98,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OpenServer/domains/localhost/back/sokol/nedogame/menu.php",
+			"file": "/C/OpenServer/domains/localhost/back/sokol/class/empty_page.php",
 			"settings":
 			{
 				"buffer_size": 335,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "chat.php",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "profile.php",
+			"settings":
+			{
+				"buffer_size": 1517,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "common_resources.php",
+			"settings":
+			{
+				"buffer_size": 376,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -318,27 +271,36 @@
 	},
 	"expanded_folders":
 	[
-		"/C/OpenServer/domains/localhost/back/sokol/vsoc",
-		"/C/OpenServer/domains/localhost/back/sokol/vsoc/css"
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc"
 	],
 	"file_history":
 	[
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/nav.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc1/db_pass.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/css/layout.css",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/css/scroll.css",
+		"/C/OpenServer/domains/localhost/back/sokol/tasks8/links.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/login.php",
+		"/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/form.php",
+		"/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/check.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/auth.php",
+		"/C/OpenServer/domains/localhost/back/sokol/nedogame/menu.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/profile.php",
+		"/C/OpenServer/domains/localhost/back/sokol/vsoc/index.php",
+		"/C/OpenServer/domains/localhost/back/sokol/tasks7/cutface.php",
+		"/C/OpenServer/domains/localhost/back/sokol/tasks7/imagick.php",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc/db_queries.php",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc/myadmin/config.sample.inc.php",
-		"/C/OpenServer/domains/localhost/back/sokol/vsoc/css/layout.css",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks6/count_session.php",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks5/block.php",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks4/products/products.php",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks4/products/queries.php",
-		"/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/form.php",
-		"/C/OpenServer/domains/localhost/back/sokol/vsoc/auth.php",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks8/temperature.php",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc/db_pass.php",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc/vsoc.sublime-project",
 		"/C/OpenServer/domains/localhost/back/sokol/tasks4/products/includes.sublime-project",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc1/index.php",
 		"/C/OpenServer/domains/localhost/index.php",
-		"/C/OpenServer/domains/localhost/back/sokol/vsoc/index.php",
 		"/C/OpenServer/domains/localhost/back/sokol/vsoc/empty_page.php",
 		"/C/OpenServer/domains/localhost/sokol/tasks4/products/side_prod.php",
 		"/C/OpenServer/domains/localhost/sokol/tasks4/products/.htaccess",
@@ -399,7 +361,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -434,314 +396,29 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/vsoc1/db_pass.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 116.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/imagick.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1690,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								379,
-								379
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks7/cutface.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								354,
-								354
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 399,
+						"buffer_size": 397,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								313,
+								313
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "profile.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1787,
-								1787
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1368.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/layout.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3337,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2625,
-								2625
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3597.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "css/scroll.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145,
-								145
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks8/links.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 759,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								644,
-								644
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "login.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1163,
-								1163
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/tasks6/cookie auth/check.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 679,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								95,
-								9
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -751,20 +428,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "auth.php",
+					"buffer": 1,
+					"file": "login.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 98,
+						"buffer_size": 1078,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								78,
-								78
+								405,
+								405
 							]
 						],
 						"settings":
@@ -776,12 +453,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dialogs.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4662,
+								4662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9065.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "/C/OpenServer/domains/localhost/back/sokol/nedogame/menu.php",
+					"buffer": 3,
+					"file": "/C/OpenServer/domains/localhost/back/sokol/class/empty_page.php",
 					"semi_transient": false,
 					"settings":
 					{
@@ -806,13 +512,98 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "chat.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "profile.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "common_resources.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								376,
+								376
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 41.0
 	},
 	"input":
 	{
@@ -853,7 +644,7 @@
 	"project": "vsoc.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -895,7 +686,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 215.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

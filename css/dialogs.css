@@ -1,0 +1,224 @@
+		.dialog-list{
+			font-size: 14pt;
+		}
+		.dialog-element,
+		.dialog-element-head{
+			height: 60px;
+			line-height: 50px;
+			margin-bottom: 10px;
+			padding: 5px !important;	
+			
+		}
+		.dialog-element{
+			cursor: pointer;
+		}
+		.dialog-element-head{
+			background-color: rgba(139, 171, 224,0.3);
+			color:#264d8e;
+			letter-spacing: 1px;
+			text-align:center;
+			margin-bottom: 	0px;
+		}
+		.dialog-element:hover{
+			background-color: rgba(0,0,0,0.1);
+		}
+		.user-icon{
+			width: 50px;
+			height: 50px;
+			background-size: cover;
+			float: left;
+			margin-right: 10px;
+
+			border-radius: 50%;
+			border:2px solid #8babe0;
+		}
+
+		.chat div{
+			padding: 0;
+		}
+		.close{
+			opacity: 0;
+			transition: 1s;
+			color:white;
+		}
+		div:hover > .close{
+			opacity: 1;
+			transition: .5s;
+		}
+		.close{
+			position: absolute;
+			right: 15px;
+			top:10px;
+		}
+
+		.dialog-element-head .name{
+			font-size: 18pt;
+			font-weight: 900;
+		}
+
+		.message{
+			font-size: 14pt;
+			background-color: white;
+			width: 200px;
+			clear: both;
+			padding: 15px !important;
+		}
+
+		.message small{
+			display: block;
+			color:gray;
+			font-family: Arial;
+			width: 100%;
+
+		}
+
+		.message.r{
+			float: right;
+			text-align: right;
+			padding-right: 25px;
+		}
+		.message.r small{
+			text-align: left;
+		}
+		.message.l{
+			text-align: left;
+			padding-left: 25px;
+		}
+		.message.l small{
+			text-align: right;
+		}
+
+		.message.l + .message.l,
+		.message.r + .message.r{
+			margin-top: 15px;
+		}
+
+		.date,
+		.msg-date{
+		
+			text-align: center;
+			font-size: 12pt;
+			
+			margin-bottom: 10px;
+			padding: 2px !important;
+			color:gray;
+
+			background-color: rgba(255,255,255,0.6);
+
+			clear: both;
+
+			transition: 1s;
+
+			
+		}
+		.msg-block{
+			position: relative;
+		}
+		.expand{
+			cursor: pointer;
+		}
+		.chat-panel {
+			position: relative;
+		}
+
+		.chat-panel .panel{
+			
+			resize: vertical;
+			background-color: rgba(0,0,0,0.06);
+			padding: 10px !important; 
+			padding-top: 0px !important;
+			
+			height: 350px;
+			overflow-y: scroll !important;
+		}
+		.light{
+			color:rgba(0,0,0,0.3);
+			font-size:80%;
+			margin-left: 5px;
+		}
+		.msg-expander{
+			position: absolute;
+			right: 25px;
+			margin-top: 2px;
+			color:gray;
+
+			opacity: 0;
+			transition: .3s;
+		}
+		.msg-date:hover{
+			background-color: rgba(255,255,255,0.9);
+			transition: 1s;
+		}
+
+		.msg-date:hover .msg-expander{
+			opacity: 1;
+			transition: .3s;
+		}
+		.msg-block + .msg-block{
+			margin-top: 15px;
+		}
+
+		.msg-container{
+			overflow:hidden; 
+		//	transition: 1s;
+		}
+		.msg-container:hover{
+			//transition: 1s;
+		}
+
+		.msg-block[exp="true"] .msg-expander .fa-chevron-up,
+		.msg-block[exp="false"] .msg-expander .fa-chevron-down{
+			display: block;
+		}
+		.msg-block[exp="true"] .msg-expander .fa-chevron-down,
+		.msg-block[exp="false"] .msg-expander .fa-chevron-up{
+			display: none;
+		}
+/*
+		.msg-block .msg-container{
+			height: auto;
+			transition:height .5s;
+		}
+		.msg-block[exp="true"] .msg-container{
+			height: auto;
+			transition:height .5s;
+		}
+		.msg-block[exp="false"] .msg-container{
+			height: 0px;
+			transition:height .5s;
+		}
+*/
+
+
+		.msg-input
+		{
+			position: relative;
+			height: 80px;
+			width: 100%;			
+		}
+		.msg-input textarea{
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			width: 100%;
+			resize: none; 
+		}
+		.msg-submit{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			background-color: transparent;
+			border: none;
+			font-size: 18pt;
+			color:gray;
+			outline: none;
+
+			transition: .5s;
+		}
+		.msg-submit:hover
+		{
+			color:darkgray;
+			transition: .5s;
+		}

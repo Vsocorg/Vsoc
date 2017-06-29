@@ -11,119 +11,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/scroll.css">
 
-	<style type="text/css">
-		.dialog-list{
-			font-size: 14pt;
-		}
-		.dialog-element,
-		.dialog-element-head{
-			height: 60px;
-			line-height: 50px;
-			margin-bottom: 10px;
-			padding: 5px !important;	
-			
-		}
-		.dialog-element{
-			cursor: pointer;
-		}
-		.dialog-element-head{
-			background-color: rgba(139, 171, 224,0.3);
-			color:#264d8e;
-			letter-spacing: 1px;
-			text-align:center;
-			margin-bottom: 	0px;
-		}
-		.dialog-element:hover{
-			background-color: rgba(0,0,0,0.1);
-		}
-		.user-icon{
-			width: 50px;
-			height: 50px;
-			background-size: cover;
-			float: left;
-			margin-right: 10px;
-
-			border-radius: 50%;
-			border:2px solid #8babe0;
-		}
-
-		.chat div{
-			padding: 0;
-		}
-		.close{
-			opacity: 0;
-			transition: 1s;
-			color:white;
-		}
-		div:hover > .close{
-			opacity: 1;
-			transition: .5s;
-		}
-		.close{
-			position: absolute;
-			right: 15px;
-			top:10px;
-		}
-
-		.dialog-element-head .name{
-			font-size: 18pt;
-			font-weight: 900;
-		}
-
-		.message{
-			font-size: 14pt;
-			background-color: white;
-			width: 200px;
-			clear: both;
-			padding: 15px !important;
-		}
-
-		.message small{
-			display: block;
-			color:gray;
-			font-family: Arial;
-			width: 100%;
-
-		}
-
-		.message.r{
-			float: right;
-			text-align: right;
-			padding-right: 25px;
-		}
-		.message.r small{
-			text-align: left;
-		}
-		.message.l{
-			text-align: left;
-			padding-left: 25px;
-		}
-		.message.l small{
-			text-align: right;
-		}
-
-		.date{
-			text-align: center;
-			font-size: 12pt;
-			
-			margin-bottom: 10px;
-			padding: 2px !important;
-			color:gray;
-		}
-
-		.chat-panel .panel{
-			background-color: rgba(0,0,0,0.04);
-			padding: 10px !important; 
-			padding-top: 0px !important;
-			
-			height: 300px;
-			overflow-y: scroll !important;
-
-
-		}
-
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/dialogs.css">
  </head> 
 <body> 	
 	<div class="back"></div>
@@ -132,7 +20,7 @@
 	col-xs-12 
 	col-sm-10 
 	col-md-8
-	">
+	" style="overflow-y: scroll;">
 		<?php include_once("nav.php") ?>
 
 		<div class="col-xs-12 page">	
@@ -201,26 +89,70 @@
 				
 				<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			</div>
-				<div class="panel">
-					<div class="date">today</div>
-					<div class="message r">
-					<small>13:23</small>
-					Hello!</div>
-					<div class="message l">
-					<small>13:24</small>
-					Hi :)</div>
-					<div class="message r">
-					<small>13:28</small>
-					How ru?</div>
-					<div class="message l">
-					<small>13:40</small>
-					Lorem ipsum. Dolore az...
-					</div>
-					<div class="message l">
-					<small>13:40</small>
-					Lorem ipsum. Dolore az...
-					</div>
-					</div>
+				
+				<div class="panel">			
+					<div class="msg-block" exp = "true">					
+						<div class="msg-date expand">
+							<div class="msg-expander">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+							</div>28.06.17
+							</div>	
+						<div class="msg-container">
+							<div class="message r">
+							<small>28.06.17<span class="light">13:23</span></small>
+							Hello!</div>
+							<div class="message l">
+							<small>28.06.17<span class="light">13:24</span></small>
+							Hi :)</div>
+							<div class="message r">
+							<small>28.06.17<span class="light">13:28</span></small>	
+							How ru?</div>						
+						</div>						
+					</div>	
+					<div class="msg-block" exp = "false">				
+						<div class="msg-date expand">
+							<div class="msg-expander">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+							</div>29.06.17
+						</div>	
+						<div class="msg-container">
+							<div class="message l">
+							<small>29.06.17<span class="light">13:40</span></small>
+							Hello!</div>
+							<div class="message l">
+							<small>29.06.17<span class="light">13:40</span></small>
+							Hi :)</div>
+							<div class="message l">
+							<small>29.06.17<span class="light">13:40</span></small>	
+							How ru?</div>						
+						</div>						
+					</div>	
+					<div class="msg-block" exp = "true">				
+						<div class="msg-date expand">
+							<div class="msg-expander">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+							</div>30.06.17
+						</div>	
+						<div class="msg-container">
+							<div class="message l">
+							<small>30.06.17<span class="light">13:40</span></small>
+							Hello!</div>
+							<div class="message l">
+							<small>30.06.17<span class="light">13:40</span></small>
+							Hi :)</div>
+							<div class="message l">
+							<small>30.06.17<span class="light">13:40</span></small>	
+							How ru?</div>						
+						</div>						
+					</div>	
+				</div>
+				<div class="msg-input">
+					<textarea placeholder="Type message here..."></textarea>
+					<button class="msg-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+				</div>
 					
 			</div>	
 		</div>
@@ -228,5 +160,39 @@
 		</div>
 		
 	</div>
+
+	<script type="text/javascript">
+		$('.chat-panel .panel').scrollTop($('.chat-panel .panel')[0].scrollHeight);
+
+
+		$(".expand").click(function(){
+			$exp = true;
+			if($(this).parent().attr("exp") == "true")
+				$exp = false;
+
+			exp($(this).parent().find(".msg-container"), $exp)
+			$(this).parent().attr("exp",$exp)
+			
+		});
+
+		
+		function exp($el,$val){
+			if($val){
+				$el.stop();
+				$el.animate({
+					height: $el.get(0).scrollHeight
+				},500,null);
+			}
+			else{
+				$el.stop();
+				$el.animate({
+					height: 0
+				},500,null);
+			}
+		}
+
+
+		
+	</script>
 </body>
 </html> 
