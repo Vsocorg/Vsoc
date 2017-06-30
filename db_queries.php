@@ -140,4 +140,22 @@
 		}
 	
 	}
+
+
+	//////////////////////////Dialogs////////////////////////////////////
+	function getDialogs($user_id){
+		global $mysqli;
+		$query = "SELECT * FROM dialogs_users,dialogs WHERE dialogs.id = dialogs_users.dialogs_id and dialogs_users.users_id =".$user_id; 
+		$result = $mysqli->query($query); 
+
+		$res = [];
+		while ($row = $result->fetch_assoc()) {		    			
+		    $res[] = $row;
+		}
+
+		return $res;
+	}
+
+
+
 ?>

@@ -1,5 +1,11 @@
-<?php session_start() ?>
+<?php session_start();
+if(!isset($_SESSION["User"])){
+	header('Location: login.php');				
+			}
 
+
+	include_once("db_queries.php");
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html lang="en">
  <head>
@@ -80,6 +86,10 @@
 						"https://s-media-cache-ak0.pinimg.com/736x/30/5a/fb/305afbd8e6e36fd72283931f7db47708--girl-face-drawing-face-drawings.jpg");
 					echo dialog_element("jamesd",
 						"https://s-media-cache-ak0.pinimg.com/736x/b5/a6/3b/b5a63b0da8d66df3dd10f269be70ea88--always-smile-face-oil.jpg");
+					echo dialog_element("annie90","
+					https://s-media-cache-ak0.pinimg.com/originals/cc/60/4b/cc604b1333851d67a89e62ff4cf1fbcb.jpg");
+					echo dialog_element("marielle","
+					https://s-media-cache-ak0.pinimg.com/736x/11/5b/c3/115bc396461d0b90ffd422d9d25e5b5b.jpg");
 				?>				
 			</div>	
 
@@ -158,6 +168,20 @@
 		</div>
 
 		</div>
+
+		<?php 
+		echo "ID: ".$_SESSION["User"]["id"]."<br>";
+		
+
+		
+		
+		
+		$dialogs = getDialogs($_SESSION["User"]["id"]);
+		foreach ($dlg as $dialogs) {
+			$dlg["name"].br(2);
+		}
+		
+		?>
 		
 	</div>
 

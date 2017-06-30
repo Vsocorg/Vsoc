@@ -16,7 +16,7 @@
 			<div class="sep"></div>		
 			
 			
-			<a href="#" class="link">
+			<a href="dialogs.php" class="link">
 				<i class="fa fa-comment" aria-hidden="true"></i>
 				<sub>3</sub>
 			</a>
