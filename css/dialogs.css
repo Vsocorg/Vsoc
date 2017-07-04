@@ -222,3 +222,66 @@
 			color:darkgray;
 			transition: .5s;
 		}
+		.dialog-list{
+		  display:flex;
+          flex-flow: column;
+		}
+
+		.sort-group{
+			order:1;			
+		}
+
+		.sort-dialog{
+			order:2;			
+		}
+
+
+		.user_icon_1,
+		.user_icon_2,
+		.user_icon_3,
+		.user_icon_4{
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			height: 100%;
+			width: 100%;
+
+		    background-size: 25px;
+		}
+
+		.sort_2 .user_icon_1{
+			
+
+
+		}
+		.sort_2 .user_icon_2{
+			
+		}
+
+		.sort_3 .user_icon_1{
+			background-size: 50% 100%;		
+
+			background-repeat: no-repeat;
+		}
+		.sort_3 .user_icon_2{
+			left:50%;
+			height: 50%;
+			background-size: 50% 100%;		
+			
+			background-repeat: no-repeat;
+		}
+		.sort_3 .user_icon_3{
+			left:50%;
+			top:50%;
+			height: 50%;
+			background-size: 50% 100%;		
+			
+			background-repeat: no-repeat;
+		}
+		
+		
+		.user-icon{
+			position: relative;
+		}
+		

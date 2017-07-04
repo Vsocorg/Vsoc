@@ -2,10 +2,6 @@
 	//session_start();
 	$mysqli = new mysqli("eu-cdbr-azure-north-e.cloudapp.net", 
 		"bc1054a31f960e", "4cd2d283", "db_vsoc");
-
-
-
-
 ////////////////////////Checks//////////////////////////////
 	function check_signin(){
 		if(isset($_GET["login"]))
@@ -20,8 +16,7 @@
 
 				header('Location: profile.php');
 			}
-			else header('Location: login.php');
-			
+			else header('Location: login.php');			
 		}
 	}
 
@@ -55,12 +50,6 @@
 		}
 		return $res;
 	}
-
-
-
-
-
-		
 	function checkUser($log){
 		global $mysqli;
 		$query = "SELECT * FROM users WHERE login ="."'".$log."'"; 
@@ -99,8 +88,7 @@
 			}
 		}
 
-		return $res;
-		
+		return $res;		
 	}
 
 
@@ -116,8 +104,7 @@
 		while ($row = $result->fetch_assoc()) {		    
 			$res = $row;
 			break;
-		}
-		
+		}		
 		return $res;
 	}	
 
@@ -125,33 +112,62 @@
 		global $mysqli;
 		$query = "SELECT * FROM users"; 
 		$result = $mysqli->query($query); 
-
 		
 		return $result;
 	}
-	function showUsers($prod){		
-
-		
-
+	function showUsers($prod){	
 		while ($row = $prod->fetch_assoc()) {		    
 			var_dump($row);
 		    echo "<br>";
-
-		}
-	
+		}	
 	}
 
 
 	//////////////////////////Dialogs////////////////////////////////////
 	function getDialogs($user_id){
 		global $mysqli;
-		$query = "SELECT * FROM dialogs_users,dialogs WHERE dialogs.id = dialogs_users.dialogs_id and dialogs_users.users_id =".$user_id; 
+		$query = "
+		SELECT * 
+		FROM dialogs_users,dialogs 
+		WHERE dialogs.id = dialogs_users.dialogs_id 
+		and dialogs_users.users_id =".$user_id;
+
 		$result = $mysqli->query($query); 
 
 		$res = [];
 		while ($row = $result->fetch_assoc()) {		    			
 		    $res[] = $row;
 		}
+
+		return $res;
+	}
+
+	//Переданный пользователь будет по индексу 0
+	function getDialogUsers($dialog_id,$except_id = null){
+		global $mysqli;
+		$query = "
+		SELECT 
+		dialogs_users.users_id as 'id', 
+		users.login as 'login',
+		users.email, images.path as 'image'
+		FROM dialogs_users,dialogs,users,images
+		WHERE 
+		users.id =  dialogs_users.users_id and
+		images.id = users.image_id and
+		dialogs.id = dialogs_users.dialogs_id and dialogs_users.dialogs_id =".$dialog_id; 
+		$result = $mysqli->query($query); 
+
+		$res = [];
+		
+		while ($row = $result->fetch_assoc()) {		    	
+			if($row["id"]!= $except_id)		
+		    	$res[] = $row;
+		    // Нас в начало
+		    else 
+		    	array_unshift($res,$row);
+		}
+		
+		
 
 		return $res;
 	}
