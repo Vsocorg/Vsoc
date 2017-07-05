@@ -11,12 +11,21 @@ class DialogManager{
 			$this->user_id = $user_id;
 		}
 
+
 		//if($ajax_update)		
    }
+   public function hasDialogs(){
+		$res = true;
+		if(count($this->dialogs) == 0)
+			$res = false;
+
+		return $res;
+	}
+
 
    public function echoDialogs(){
    		foreach ($this->dialogs as $dlg) {					
-			$users = getDialogUsers($dlg["id"],$this-$user_id);
+			$users = getDialogUsers($dlg["id"],$this->user_id);
 
 			//Количество человек в чате, без нас
 			$n = count($users)-1; 
@@ -28,6 +37,7 @@ class DialogManager{
 				$urls = [];
 
 				foreach ($users as $user) {
+					if($user["id"]!=$this->user_id)
 					$urls[] = $user["image"];
 				}
 
@@ -75,7 +85,7 @@ class DialogManager{
 					$res = "
 				<a class='sort-group'>
 				<div class='dialog-element'>
-					<div class='user-icon sort_$n' style='background-image:url($urls);'>";
+					<div class='user-icon sort_$n' >";
 					
 
 					for ($i=0; $i < count($urls) and $i < 4; $i++) { 

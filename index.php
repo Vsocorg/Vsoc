@@ -10,5 +10,8 @@
 	<a href="login.php">Login</a>
 	<a href="profile.php">Profile</a>
 	<a href="dialogs.php">Dialogs</a>
+	<a href="reg.php">Reg</a>
+	<a href="auth.php?action=reg&first_name=Vlad&last_name=Ivanov&email=v.ivanov%40gmail.com&login=vlad&image=asd.jpg&pass=vlad&confirm=vlad">Test Reg</a>
+	<a href="auth.php?action=img">Images</a>
 </body>
 </html> 

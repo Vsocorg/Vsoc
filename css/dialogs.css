@@ -258,30 +258,71 @@
 		.sort_2 .user_icon_2{
 			
 		}
-
+		.sort_2 .user_icon_1,
+		.sort_2 .user_icon_2,
 		.sort_3 .user_icon_1{
-			background-size: 50% 100%;		
+			background-size: 200% 100%; 
+    		background-position: -9px 0px;
 
 			background-repeat: no-repeat;
+
+			width: 25px;
+
+			border-right: 4px solid white;
 		}
-		.sort_3 .user_icon_2{
-			left:50%;
-			height: 50%;
-			background-size: 50% 100%;		
-			
-			background-repeat: no-repeat;
+		.sort_2 .user_icon_2{
+			left: 50%;
 		}
-		.sort_3 .user_icon_3{
-			left:50%;
+
+
+		.sort_3 .user_icon_2,
+		.sort_4 .user_icon_2,
+		.sort_4 .user_icon_3{
+			left: 50%;
+		    height: 25px;
+		    width: 25px;
+		    background-size: 150% 150%;
+		    background-repeat: no-repeat;
+		    background-position: -8.5px -4px;
+
+		    border-bottom: 4px solid white;
+		}
+		.sort_3 .user_icon_3,
+		.sort_4 .user_icon_1,
+		.sort_4 .user_icon_4{
+			left: 50%;
 			top:50%;
-			height: 50%;
-			background-size: 50% 100%;		
-			
-			background-repeat: no-repeat;
+		    height: 25px;
+		    width: 25px;
+		    background-size: 150% 150%;
+		    background-repeat: no-repeat;
+		    background-position: -6.5px -4px;
 		}
-		
+		.sort_4 .user_icon_2,
+		.sort_4 .user_icon_1{
+			left: 0 !important;
+		}
+		.sort_4 .user_icon_1{
+			background-position: -6.5px -8px;
+
+		}
+
+		.sort_4 .user_icon_1,
+		.sort_4 .user_icon_2{
+			border-right: 2px solid white;
+			z-index: 1;
+
+		}
+		.sort_4 .user_icon_1{
+			z-index: 2;
+		}
+
+		.sort_2 .user_icon_2{
+			border: none;
+		}
 		
 		.user-icon{
 			position: relative;
+			overflow: hidden;
 		}
 		

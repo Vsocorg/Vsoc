@@ -5,4 +5,7 @@
 		
 	check_signin();
 	check_logout();
+
+	check_reg();
+	check_img();
 ?>

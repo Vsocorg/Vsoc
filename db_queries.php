@@ -4,19 +4,22 @@
 		"bc1054a31f960e", "4cd2d283", "db_vsoc");
 ////////////////////////Checks//////////////////////////////
 	function check_signin(){
-		if(isset($_GET["login"]))
-		{
-			$user = auth($_GET["login"],$_GET["pass"]);
-			if(
-				 $user != null
-				){
-				setcookie('user', md5($_GET["login"].$_GET["pass"]) ,time()+2592000);
+		if(isset($_GET["action"]) and $_GET["action"] == "login"){
 
-				$_SESSION["User"] = $user;
+			if(isset($_GET["login"]))
+			{
+				$user = auth($_GET["login"],$_GET["pass"]);
+				if(
+					 $user != null
+					){
+					setcookie('user', md5($_GET["login"].$_GET["pass"]) ,time()+2592000);
 
-				header('Location: profile.php');
+					$_SESSION["User"] = $user;
+
+					header('Location: profile.php');
+				}
+				else header('Location: login.php');			
 			}
-			else header('Location: login.php');			
 		}
 	}
 
@@ -32,6 +35,49 @@
 			}
 		header('Location: login.php');
 		}		
+	}
+	function check_img(){
+		if(isset($_GET["action"]) and $_GET["action"] == "img"){
+			getImages();
+		}
+	}
+	function check_reg(){
+		if(isset($_GET["action"]) and $_GET["action"] == "reg"){
+
+			//Совпадение паролей
+			if(
+				isset($_GET["pass"]) and
+				isset($_GET["confirm"])				
+				)
+				if($_GET["pass"] != $_GET["confirm"])
+					echo "header('Location: reg.php')";
+
+
+			//Все параметры
+			if(
+				isset($_GET["first_name"]) and
+				isset($_GET["last_name"]) and
+				isset($_GET["login"]) and
+				isset($_GET["image"]) and
+				isset($_GET["email"]) and
+				isset($_GET["pass"])
+				){
+				echo "isset all<br>";
+				regUser(
+					$_GET["first_name"],
+					$_GET["last_name"],
+					$_GET["login"],
+					$_GET["image"],
+					$_GET["email"],
+					$_GET["pass"]
+				);
+				echo "header('Location: profile.php')";
+			}
+
+			echo "header('Location: reg.php') 2";
+		}
+		echo "header('Location: reg.php') 3";
+
 	}
 
 ////////////////////////AUTH//////////////////////////////
@@ -57,7 +103,76 @@
 		return $result;
 	}	
 
+	function regUser($f_name,$l_name,$login,$img_url,$email,$pass){
+		getImages();
+		//return;
+
+		//Добавляем кратинку, получайм id
+		$img_id = null;
+
+		if(validImageUrl($img_url)){
+			echo "adding image<br>";
+			$img_id = addImage($img_url);
+		}
+/*
+		//Добавляем пользователя
+		$user_id = addUser($f_name,$l_name,$login,$img_id,$email,$pass,"No info.");
+
+		$user = getUser($user_id);
+
+
+		setcookie('user', md5($_GET["login"].$_GET["pass"]) ,time()+2592000);
+		$_SESSION["User"] = $user;
+
+		echo "Reged: ".$user["id"];*/
+		//header('Location: profile.php');
+
+	}
+
 ////////////////////////PROFILE&IMAGES//////////////////////////////
+
+	function getImages(){
+		$d = get("SELECT * FROM images");
+		echo "Images: <br>";
+
+		foreach ($d as $el ) {
+			echo "id ".$el['id']." ".$el["path"]."<br>";
+		}
+		//var_dump($d);
+		
+
+	}
+
+	function addImageWithOwner($url,$owner_id){		
+		$query = "INSERT INTO `images` (`path`, `security`, `owner_id`) VALUES ('$url', '0', '$owner_id');";
+		return insert($query);
+	}
+	function addImage($url){
+		$query = "INSERT INTO `images` (`path`, `security`) VALUES ('$url', '0');";
+		return insert($query);
+	}
+
+
+	function getImage($id){
+		global $mysqli;
+		$query = "SELECT * FROM images WHERE id = ".$id; 
+		$result = $mysqli->query($query); 
+		
+		//var_dump($result);
+
+		$img = null;
+		while ($row = $result->fetch_assoc()) {		    
+			$img = $row;
+			break;
+		}
+
+		return $img;
+	}
+
+	//jpg png
+	function validImageUrl($url){
+		return true;
+	}
 
 	function getProfileImages($user_id){
 		global $mysqli;
@@ -93,6 +208,22 @@
 
 
 ////////////////////////USERS//////////////////////////////
+
+	function addUser($f_name,$l_name,$login,$img_id,$email,$pass,$info){
+		//insert id
+		return insert(
+			"INSERT INTO `users` (`login`, `first_name`, `last_name`, `email`, `password`, `salt`, `image_id`, `info`) 
+			VALUES (
+			'$login',
+			'$f_name',
+			'$l_name',
+			'$email',
+			'$pass',
+			'$pass',
+			'$img_id',
+			'$info');");
+
+	}
 	function getUser($user_id){
 		//echo "UserId: ".$user_id."<br>";
 		global $mysqli;
@@ -173,5 +304,26 @@
 	}
 
 
+
+//////////////////////////////////////////////////////
+	function insert($query){
+		global $mysqli;		
+
+		$result = $mysqli->query($query); 
+		
+		echo "insert: id ".$mysqli->insert_id.".<br>";
+		return $mysqli->insert_id;
+	}
+	function get($query){
+		global $mysqli;		
+		$result = $mysqli->query($query); 		
+
+		$res = [];
+		while ($row = $result->fetch_assoc()) {		    			
+		    $res[] = $row;
+		}
+
+		return $res;
+	}
 
 ?>

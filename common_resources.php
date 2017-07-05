@@ -15,7 +15,9 @@ function tag($tag_name,$content){
 	$content.
 	'</'.$tag_name.'>';
 }
-
+function deb($str){
+	echo tag("div class='debuglog'",$str);
+}
 
 function strN($str,$n = 1){
 	$res = "";
@@ -26,4 +28,11 @@ function strN($str,$n = 1){
 	return $res;
 
 }
+
+function user_link($user){
+	return tag('a href = "profile.php?id='.$user["id"].'"','@'.$user["login"]);
+}
+
+
+
 ?>

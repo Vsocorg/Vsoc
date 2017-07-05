@@ -1,5 +1,5 @@
 <nav class="col-xs-12 nav m_bottom25">
-			<a href="index.php" class="link link-main">VSOC</a>
+			<a href="feed.php" class="link link-main">VSOC</a>
 
 			<div class="sep"></div>		
 
@@ -8,6 +8,7 @@
 				<i class="fa fa-user" aria-hidden="true"></i>				
 			</a>
 			<div class="nav-menu">
+					<a href="feed.php">Feed</a>
 					<a href="profile.php">My Profile</a>
 					<a href="auth.php?action=logout">Log Out</a>
 				</div>		

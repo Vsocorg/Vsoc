@@ -7,6 +7,15 @@ if(!isset($_SESSION["User"])){
 	include_once("db_queries.php");
 
 
+	$user = $_SESSION["User"];
+	if(isset($_GET["id"])){
+		$user = getUser($_GET["id"]);
+
+		
+
+	}
+	
+	
 			
 
 ?>
@@ -36,21 +45,41 @@ if(!isset($_SESSION["User"])){
 		
 		<div class="col-xs-12 page">	
 		<div class="row">
+		<?php 
+				if(is_null($user)){
+					echo tag(
+						"h2 class='t_color hcenter'",
+						"User not found. ");
+					echo 
+					tag("div class='hcenter'",
+						tag(
+							"a href='feed.php' class='hcenter'",
+							"Feed").
+						br().
+						tag(
+							"a href='profile.php' class='hcenter'",
+							"My page")
+						);
+				}
+			?>
+
 			<div class="col-xs-5 main-photo">	
-				<img src="<?=getAvatar($_SESSION["User"]["id"])["path"]?>" alt="">
+				<img src="<?=getAvatar($user["id"])["path"]?>" alt="">
 			</div>
 			<div class="col-xs-7 ">	
+
 				<div class="profile-btns">
 					<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
 				</div>
 				<h3 class="p0 m0" id="profile-head"><b id="profile-name">
-				<?= $_SESSION["User"]["first_name"]." ".$_SESSION["User"]["last_name"] ?></b> <small>online</small></h3><br>	
+				<?= $user["first_name"]." ".$user["last_name"] ?></b> <small>online</small></h3><br>	
 
 					<div class="profile-info">
 				<p> <b>Age:</b> 61 y.o.</p>
 				<p> <b>Profession: </b>photographer</p>
 				<p> <b>Location:</b> Odessa</p>
-				<p> <b>About:</b> <?= $_SESSION["User"]["info"] ?></p>		
+				<p> <b>About:</b> <?= $user["info"] ?></p>		
+
 				</div>
 			</div>		
 		</div>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html lang="en">
  <head>
@@ -14,9 +15,10 @@
 	<div class="pan right">
 		<div class="login">
 			<form method="GET" action="auth.php">
+			<input type="hidden" name="action" value="login">
 			<a href="index.php" class="link"><h1>VSOC</h1></a>
 			
-			<div class="col-xs-12 p0">
+			<div class="col-xs-12 p0 m_bottom">
 				<div class="col-xs-12 p0">
 					<label>Login</label>
 				</div>
@@ -33,7 +35,11 @@
 					<input type="submit" value="Sign In">
 				</div>
 			</div>
-				
+
+			<div class="hcenter">
+
+				<?php echo tag("a href='reg.php'","Register Me");?>
+			</div>
 
 			</form>
 		</div>

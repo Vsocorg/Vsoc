@@ -78,7 +78,23 @@
 				</div>
 
 				<?php					
-					$dm->echoDialogs();		
+
+					if($dm->hasDialogs())
+						$dm->echoDialogs();		
+					else{ 
+						echo br().
+						tag("p class='hcenter'",
+							"No dialogs?".br(2)."Try to chat with:".br().
+							user_link(getUser(31)).br().
+							user_link(getUser(41))
+							);
+						
+						;
+						
+						
+					}
+
+
 					//echo group_element("test");			
 				?>				
 
