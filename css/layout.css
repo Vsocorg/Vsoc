@@ -218,6 +218,25 @@ nav .link sub{
 }
 
 /*//////////////////////////////////////////*/
+		.msg-submit{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			background-color: transparent;
+			border: none;
+			font-size: 18pt;
+			color:gray;
+			outline: none;
+
+			transition: .5s;
+		}
+		.msg-submit:hover
+		{
+			color:darkgray;
+			transition: .5s;
+		}
+
+/*//////////////////////////////////////////*/
 .login{
 	width: 300px;
 	position: absolute;		

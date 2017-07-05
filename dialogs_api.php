@@ -41,14 +41,15 @@ class DialogManager{
 					$urls[] = $user["image"];
 				}
 
-				echo group_element($dlg["name"],$urls);
+				echo group_element($dlg["name"],$urls,$dlg["id"]);
 			}
 			else // диалог 
 			{
 				$other = $users[1];
 				echo dialog_element(
 					$other["login"],
-					$other["image"]
+					$other["image"],
+					$dlg["id"]
 					);
 			}
 
@@ -61,10 +62,11 @@ class DialogManager{
 
 				function dialog_element(
 					$name, 
-					$url="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png"
+					$url="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png",
+					$id = 0
 				){
 					return "
-				<a class='sort-dialog'>
+				<a class='sort-dialog' dialog-id='$id' login='@$name'>
 				<div class='dialog-element'>
 					<div class='user-icon' style='background-image:url($url);'>
 					</div>
@@ -76,14 +78,15 @@ class DialogManager{
 				}
 				function group_element(
 					$name, 
-					$urls = null
+					$urls = null,
+					$id = 0
 				){
 					$n = count($urls);
 					if($n > 4)
 						$n = 4;
 
 					$res = "
-				<a class='sort-group'>
+				<a class='sort-group' dialog-id='$id' login='@$name'>
 				<div class='dialog-element'>
 					<div class='user-icon sort_$n' >";
 					

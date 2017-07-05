@@ -11,6 +11,18 @@
 		false);
 
 	$dialogs = $dm->dialogs;
+
+	
+	$dlg_msgs = [];
+
+	foreach ($dialogs as $dlg ) {
+		$dlg_msgs[$dlg["id"]] = getMessages($dlg["id"]); 
+		//echo "dlg".$dlg["id"]." loaded<br>";
+	}
+
+	
+	
+	    
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html lang="en">
@@ -102,13 +114,16 @@
 
 			<div class="col-xs-9 chat-panel">
 			<div class='dialog-element-head'>
-				<span class="name">John Doe</span>
+				<div style="display: none" id="dialog-head">
+					<span class="name">John Doe</span>
 				
-				<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+					<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				</div>
 			</div>
 				
 				<div class="panel">			
-					<div class="msg-block" exp = "true">					
+					<div class="msg-block" exp = "true">	
+					<!--				
 						<div class="msg-date expand">
 							<div class="msg-expander">
 								<i class="fa fa-chevron-up" aria-hidden="true"></i>
@@ -164,11 +179,45 @@
 							<small>30.06.17<span class="light">13:40</span></small>	
 							How ru?</div>						
 						</div>						
+						-->
 					</div>	
+
 				</div>
 				<div class="msg-input">
-					<textarea placeholder="Type message here..."></textarea>
-					<button class="msg-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+					<form action="send_message.php" method="POST"  id="messageForm" style="width: 100%;">
+						<textarea name="text" placeholder="Type message here..." disabled></textarea>
+						<button class="msg-submit" disabled=><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+					</form>
+					 <script type="text/javascript">
+			    var frm = $('#messageForm');
+
+			    frm.submit(function (e) {
+
+			        e.preventDefault();
+
+			        $.ajax({
+			            type: frm.attr('method'),
+			            url: frm.attr('action'),
+			            data: frm.serialize(),
+			            success: function (data) {
+			                console.log('Submission was successful.');
+			                console.log(data);
+			                $('#myModalSendMessage').modal('hide');
+			                
+			                
+			                
+			                alert("Successful send.");
+			                location.reload();
+
+			            },
+			            error: function (data) {
+			                console.log('An error occurred.');
+			                console.log(data);
+			                alert("Error occured.");
+			            },
+			        });
+			    });
+			</script>
 				</div>
 					
 			</div>	
@@ -229,6 +278,70 @@
 				},500,null);
 			}
 		}
+
+
+		$(".sort-dialog , .sort-group").click(function(){
+			
+			loadDialog($(this).attr("dialog-id"));
+			//$("#dialog-head .name").empty();
+			
+
+			$("#dialog-head .name").text($(this).attr("login"));
+
+		});
+
+		
+    	var $msgs =<?php echo json_encode($dlg_msgs);?>;
+    	//console.log($msgs[1]);
+
+    	var $my_id = <?php 
+    	echo $_SESSION["User"]["id"]; 
+    	?>;
+
+
+
+		function loadDialog($id){
+			
+			$(".msg-block").empty();
+			
+
+			console.log();
+
+			for (var i = 0; i < $msgs[$id].length; i++) {			
+				
+				showMsg($msgs[$id][i],$my_id);
+			}
+
+			
+			enableChat();
+			
+		}
+		function showMsg(item,my_id) {
+
+			var pos = `r`;
+			if(item["user_id"]!= my_id)
+				pos = `l`;
+			
+
+			var el = `  							
+						<div class="msg-container">
+							<div class="message `+pos+`">
+							<small>`+item["date"]+`</small>
+							`+item["text"]+`
+							</div>
+							</div>
+`;
+    		$(".msg-block").append(el);
+		}
+
+		function enableChat(){
+			$("#messageForm textarea,#messageForm button").attr("disabled",false);
+
+			$("#dialog-head").css({"display":"block"});
+			
+		}
+
+
 
 
 		

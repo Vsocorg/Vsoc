@@ -1,0 +1,28 @@
+					.btn-friend{
+						display: inline;
+						text-decoration: none;
+					}
+					.btn-friend.none{
+						display: none;
+					}
+
+					.friend	#f1,
+					.friend #f2,
+					.friend:hover #f3,
+					#f2,
+					#f3,
+					#f4{
+						display: none;
+					}					
+					.friend:hover #f2,
+					.friend #f3 ,
+					.friend.waiting:hover #f4{
+						display: inline;
+					}
+					.friend.waiting:hover #f2{
+						display: none;
+					}
+					#f1 a{color:green;}
+					#f2 a{color:red;}
+					#f3 a{color:green;}
+					.friend.waiting #f3 a{color:gray;}

@@ -56,11 +56,11 @@
 				<div class="col-xs-12 p0 m_bottom">
 					<div class="col-xs-6 p0 ">					
 						<input type="text" placeholder="First Name"
-						name="first_name" required>					
+						name="first_name" required value="vladislav">					
 					</div>
 					<div class="col-xs-6 p0">					
 						<input type="text" placeholder="Last Name"
-						name="last_name" required>
+						name="last_name" required value="ivanov">
 						
 					</div>
 				</div>
@@ -68,14 +68,14 @@
 					<label>Email</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom50">
-					<input type="email" name="email" required>
+					<input type="email" name="email" required value="v.ivanov@gmail.com">
 				</div>
 
 				<div class="col-xs-12 p0">
 					<label>Login</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom">
-					<input type="text" name="login" required>
+					<input type="text" name="login" required value="vlad">
 				</div>
 				
 
@@ -83,21 +83,21 @@
 					<label>Image</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom25">
-					<input type="text" name="image" required placeholder="URL: .jpg .png">
+					<input type="text" name="image" required placeholder="URL: .jpg .png" value="https://s-media-cache-ak0.pinimg.com/originals/2a/f7/ea/2af7ea8bbd5d4fa98495a21d409d3f3b.jpg">
 				</div>
 
 				<div class="col-xs-12 p0 ">
 					<label>Password</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom25">
-					<input type="password" name="pass" required>
+					<input type="password" name="pass" required value="vlad">
 				</div>
 
 				<div class="col-xs-12 p0 ">
 					<label>Confirm Password</label>
 				</div>
 				<div class="col-xs-12 p0 m_bottom25">
-					<input type="password" name="confirm" required>
+					<input type="password" name="confirm" required value="vlad">
 				</div>
 				<div class="col-xs-12 p0">
 					<input type="submit" value="Register Me">

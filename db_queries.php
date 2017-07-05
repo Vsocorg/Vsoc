@@ -114,18 +114,21 @@
 			echo "adding image<br>";
 			$img_id = addImage($img_url);
 		}
-/*
+
 		//Добавляем пользователя
 		$user_id = addUser($f_name,$l_name,$login,$img_id,$email,$pass,"No info.");
 
 		$user = getUser($user_id);
 
+		//Устанавливаем владельца изображения
+		setImageOwner($img_id,$user_id);
+
 
 		setcookie('user', md5($_GET["login"].$_GET["pass"]) ,time()+2592000);
 		$_SESSION["User"] = $user;
 
-		echo "Reged: ".$user["id"];*/
-		//header('Location: profile.php');
+		//echo "Reged: ".$user["id"];
+		header('Location: profile.php');
 
 	}
 
@@ -148,8 +151,12 @@
 		return insert($query);
 	}
 	function addImage($url){
-		$query = "INSERT INTO `images` (`path`, `security`) VALUES ('$url', '0');";
+		$query = "INSERT INTO `images` (`path`, `security`, `owner_id`) VALUES ('$url', '0', 1);";
 		return insert($query);
+	}
+
+	function setImageOwner($image_id,$owner_id){
+		return execute("UPDATE `images` SET `owner_id` = '$owner_id' WHERE `images`.`id` = $image_id;");
 	}
 
 
@@ -303,8 +310,59 @@
 		return $res;
 	}
 
+	function sendMessage($user_id,$other_id,$text,$date){
+		$dlg = usersHasDialog($user_id,$other_id)[0];
+		echo "sendMessage<br>";
+		if($dlg == null){
+			echo "noDialog<br>";
+			addDialog($user_id,$other_id);
+			echo "created<br>";
 
+		}
+		else{
+			$res = addMessage($user_id,$dlg["id"],$text,$date);
+			echo "addMessage<br>";
+			var_dump($res);
+		}
 
+		
+	}
+	function addDialog($user_id,$other_id){
+		$query ="
+		INSERT INTO `dialogs` ( `name`, `owner_id`, `user_count`, `other_id`) VALUES ('Dialog', '$user_id', '2', '$other_id');
+
+		";
+		return insert($query);
+	}
+	function usersHasDialog($user_id,$other_id){
+		$query = "
+		SELECT * 
+		FROM dialogs
+		WHERE 				
+		dialogs.user_count = 2 and
+		(
+		(dialogs.owner_id = $user_id and	dialogs.other_id = $other_id)
+		or
+		(dialogs.owner_id = $other_id and	dialogs.other_id = $user_id)
+		);
+		";
+
+		return get($query);
+
+	}
+	function addMessage($user_id,$dialog_id,$text,$date){
+		$query = "
+		INSERT INTO `messages` (`text`, `user_id`, `dialog_id`, `date`) VALUES ('$text', '$user_id', '$dialog_id', '$date');
+		";
+		return insert($query);
+	}
+
+	function getMessages($dialog_id){
+		$query = "
+		SELECT * FROM messages WHERE dialog_id = $dialog_id
+		";
+		return get($query);
+	}
 //////////////////////////////////////////////////////
 	function insert($query){
 		global $mysqli;		
@@ -325,5 +383,9 @@
 
 		return $res;
 	}
-
+	function execute($query){
+		global $mysqli;		
+		$result = $mysqli->query($query); 		
+		return $result;
+	}
 ?>
